@@ -1,0 +1,19 @@
+body{
+    background-color:salmon;
+}
+#header{
+    background-color:white;
+    opacity:0.5;
+}
+.card{
+	padding:5px;
+	overflow: hidden;
+}
+.card a{
+	text-decoration: none;
+	color: white;
+}
+.card-body>h5{
+	font-weight: bold;
+	margin:0px auto;
+}

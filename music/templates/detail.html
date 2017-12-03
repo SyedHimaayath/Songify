@@ -1,0 +1,17 @@
+{% extends 'home.html' %}
+<head>
+    <title>{% block title %}album{% endblock %}</title>
+</head>
+<body>
+{% block content %}
+    {% if song %}
+        {% for i in song %}
+            <ul>
+                <li>{{ i.song_title }}</li>
+            </ul>
+        {% endfor %}
+    {% else %}
+        <h4>Songs not added yet</h4>
+    {% endif %}
+{% endblock %}
+</body>
