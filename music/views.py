@@ -2,7 +2,7 @@ from django.http import Http404, HttpResponse
 from django.shortcuts import render
 from .models import Album, Song
 
-def home(request):
+def index(request):
     details = Album.objects.all()
     c = {"details":details}
     return render(request, 'home.html', c)
@@ -15,3 +15,4 @@ def detail(request, album_id):
     if album:
         song = Song.objects.filter(album=album_id)
     return render(request, 'detail.html', {'song':song})
+
