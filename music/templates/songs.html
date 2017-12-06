@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Songs{% endblock %}
+{% block content %}
+    {% if song %}
+        {% for i in song %}
+            <ul>
+                <li>{{ i.song_title }}</li>
+            </ul>
+        {% endfor %}
+    {% else %}
+        <h4>Songs not added yet</h4>
+    {% endif %}
+{% endblock %}

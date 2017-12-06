@@ -16,3 +16,9 @@ def detail(request, album_id):
         song = Song.objects.filter(album=album_id)
     return render(request, 'detail.html', {'song':song})
 
+def songs(request):
+    try:
+        song = Song.objects.all()
+    except Song.DoesNotExist:
+        raise Http404("Can't find songs")
+    return render(request, 'songs.html', {'song':song})
