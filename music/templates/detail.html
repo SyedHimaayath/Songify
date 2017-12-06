@@ -4,12 +4,23 @@
 </head>
 <body>
 {% block content %}
-    {% if song %}
-        {% for i in song %}
-            <ul>
-                <li>{{ i.song_title }}</li>
-            </ul>
-        {% endfor %}
+    {% if album %}
+        <div class="mainc container">
+            <div class="card col-xs-6 col-sm-3 col-md-2">
+                <img class="card-img-top" src="{{ album.logo }}" alt="Card image cap" height="180px" width="180px">
+                <div class="card-body">
+                    <h4 class="card-title">{{ album.album_title }}</h4>
+                    <h5>{{ album.artist }}</h5>
+              </div>
+            </div>
+            <div class="col-md-8">
+            {% for i in album.song_set.all %}
+                <ul style="list-style:none;">
+                    <li>{{ i.song_title }}</li>
+                </ul>
+            {% endfor %}
+            </div>
+        </div>
     {% else %}
         <h4>Songs not added yet</h4>
     {% endif %}
