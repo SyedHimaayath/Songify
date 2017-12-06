@@ -17,14 +17,12 @@
             <div id="songs_list" class="col-xs-12 col-sm-7 col-md-offset-1 col-md-8">
                 <table>
                     <tr>
-                        <th>No.&nbsp;</th>
-                        <th>Song &nbsp;</th>
-                        <th>Duration</th>
+                        <th class="col-md-3">Song &nbsp;</th>
+                        <th class="col-md-3">Duration</th>
                     </tr>
                 {% for i in album.song_set.all %}
                     <tr>
-                        <td>{{ forloop.counter }}</td>
-                        <td>{{ i.song_title }}</td>
+                        <td class="col-md-3">{{ i.song_title }}</td>
 
                     </tr>
                 {% endfor %}
