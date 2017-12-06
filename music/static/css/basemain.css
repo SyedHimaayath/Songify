@@ -14,5 +14,48 @@ body{
 }
 .card-body>h5{
 	font-weight: bold;
-	margin:0px auto;
 }
+#songs_list{
+    margin-top:10px;
+}
+.album_title{
+	color: white;
+}
+.artist{
+	color: white;
+}
+.genre_head{
+	margin-top: 10px;
+}
+.genre_detail{
+	color: white;
+}
+th{
+	font-size: 18px;
+}
+td{
+	font-size: 17px;
+}
+.foot{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: white;
+	text-align: center;
+	font-size: 22px;
+}
+.foot-in{
+	margin:2vh auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+

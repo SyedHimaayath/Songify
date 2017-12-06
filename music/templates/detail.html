@@ -6,19 +6,29 @@
 {% block content %}
     {% if album %}
         <div class="mainc container">
-            <div class="card col-xs-6 col-sm-3 col-md-2">
+            <div class="card col-xs-12 col-sm-3 col-md-2">
                 <img class="card-img-top" src="{{ album.logo }}" alt="Card image cap" height="180px" width="180px">
                 <div class="card-body">
-                    <h4 class="card-title">{{ album.album_title }}</h4>
-                    <h5>{{ album.artist }}</h5>
+                    <h4 class="card-title album_title">{{ album.album_title }}</h4>
+                    <h5 class="artist">{{ album.artist }}</h5>
+                    <h5 class="genre_head">Genre : <span class="genre_detail">{{ album.genre }}</span></h5>
               </div>
             </div>
-            <div class="col-md-8">
-            {% for i in album.song_set.all %}
-                <ul style="list-style:none;">
-                    <li>{{ i.song_title }}</li>
-                </ul>
-            {% endfor %}
+            <div id="songs_list" class="col-xs-12 col-sm-7 col-md-offset-1 col-md-8">
+                <table>
+                    <tr>
+                        <th>No.&nbsp;</th>
+                        <th>Song &nbsp;</th>
+                        <th>Duration</th>
+                    </tr>
+                {% for i in album.song_set.all %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ i.song_title }}</td>
+
+                    </tr>
+                {% endfor %}
+                </table>
             </div>
         </div>
     {% else %}
