@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 <head>
-    <title>{% block title %}album{% endblock %}</title>
+    <title>{% block title %}{{ album.artist }}-{{ album.album_title }}{% endblock %}</title>
 </head>
 <body>
 {% block content %}
