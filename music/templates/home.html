@@ -12,7 +12,7 @@
               </a>
                 <div class="card-body">
                     <h4 class="card-title"><a href="{% url 'detail' i.id %}">{{ i.album_title }}</a></h4>
-                    <h5>{{ i.artist }}</h5>
+                    <h5>{{ i.artist }}<div class=" playbutt"><span class="glyphicon glyphicon-play"></span> </div></h5>
               </div>
             </div>
         {% endfor %}
