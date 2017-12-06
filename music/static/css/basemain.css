@@ -15,6 +15,10 @@ body{
 .card-body>h5{
 	font-weight: bold;
 }
+.home .card img{
+	height:180px;
+	width:180px;
+}
 #songs_list{
     margin-top:10px;
 }
@@ -42,7 +46,7 @@ td{
 	width: 100%;
 	background-color: rgba(255,255,255,0.5);
 	text-align: center;
-	font-size: 22px;
+	font-size: 24px;
 }
 .foot-in{
 	margin:2vh auto;
@@ -52,11 +56,35 @@ td{
 	right:0;
 	top:0;
 	background-color: rgba(255,255,255,0.5);
-	padding:10px;
+	padding:8px;
+}
+#playstatus{
+	margin:0px auto;
+	height:5px;
+	background-color: white;
+}
+#currentSong{
+	float: left;
+	margin:0px;
+	text-align: left;
+}
+#currentSong img{
+	margin:5px;
 }
 
-
-
+@media (max-width:768px){
+	.home.container{
+		padding:8px;
+		padding-right:10px;
+	}
+	.home .card img{
+		height:160px;
+		width:160px;
+	}
+	.playbutt{
+		padding:6px;
+	}
+}
 
 
 

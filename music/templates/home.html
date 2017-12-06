@@ -3,12 +3,12 @@
 
 
 {% block content %}
-    <div class="container">
+    <div class="home container">
     {% if details %}
         {% for i in details %}
             <div class="card col-xs-6 col-sm-3 col-md-2">
               <a href="{% url 'detail' i.id %}">
-                  <img class="card-img-top" src="{{ i.logo }}" alt="Card image cap" height="180px" width="180px">
+                  <img class="card-img-top" src="{{ i.logo }}" alt="Card image cap">
               </a>
                 <div class="card-body">
                     <h4 class="card-title"><a href="{% url 'detail' i.id %}">{{ i.album_title }}</a></h4>
