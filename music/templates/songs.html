@@ -3,8 +3,8 @@
 {% block content %}
     {% if song %}
         {% for i in song %}
-            <ul>
-                <li>{{ i.song_title }}</li>
+            <ul style="list-style: none;">
+                <li><img class="song_img" src="" height="40px" width="40px" >&emsp;{{ i.song_title }}</li>
             </ul>
         {% endfor %}
     {% else %}
