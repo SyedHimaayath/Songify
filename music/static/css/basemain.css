@@ -73,10 +73,7 @@ td{
 	height:65px;
 	width: 65px;
 }
-ul>.song_img{
-	height:40px;
-	width: 40px;
-}
+
 
 @media (max-width:768px){
 	.home.container{
